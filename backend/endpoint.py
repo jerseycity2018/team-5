@@ -100,25 +100,17 @@ def getUser(username):
 	return {"user": "user does not exist"}
 
 
-@app.route("/social/<userID>", methods = ['GET'])
-def getSocialMediaPosts(userID):
-	mockSocialMedia = [["bob", "@bob", "Hi"], ["jack", "jack", "@jack", "hello"]]
-	"""
-	reader = csv.reader(open('../utilities/socialmedia.csv', 'r'))
-	result = {"posts": {}}
-	for row in reader:
-		result["posts"] = {"data" : row }
-
-	"""
+@app.route("/social/", methods = ['GET'])
+def getSocialMediaPosts():
+	reader = csv.reader(open('../utilities/socialdata.csv', 'r'))
 	result = {"posts" : []}
-	for row in mockSocialMedia:
+	for row in reader:
 		currName = row[0]
 		currHandle = row[1]
 		currPost = row[2]
 		currRes = {"name" : currName, "username": currHandle, "post": currPost }
 		result["posts"].append(currRes)
-
-	return currRes
+	return json.dumps(result)
 
 
 
