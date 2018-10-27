@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Landing from './components/landing';
 import Login from './components/login';
 import Register from './components/register';
 import Home from './components/home';
 import Leaderboard from './components/leaderboard';
 import Settings from './components/settings';
+import About from './components/about';
 
 class Routes extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <main>
                 <Switch>
                     <Route exact path='/' component={Landing} />
+                    <Route path='/about' component={About}/>
                     <Route path='/login' component={Login}/>
                     <Route path='/register' component={Register}/>
                     <Route path='/home' component={Home}/>
                     <Route path='/leaderboard' component={Leaderboard}/>
                     <Route path='/settings' component={Settings}/>
                 </Switch>
-            </BrowserRouter>
+            </main>
         )
     }
 }
