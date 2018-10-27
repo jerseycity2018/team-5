@@ -33,26 +33,26 @@ class Leaderboard2 extends Component {
     }
 
     render() {
-        console.log(this.state.data);
+        console.log(this.state.data[0]);
         return (
             <div>
-                <h3></h3>
+                <h3>Forest Hills</h3>
                 <Table>
                     <thead>
                         <tr>
-                        <th data-field="name">Name</th>
-                        <th data-field="username">User Name</th>
-                        <th data-field="bottles">Bottles</th>
-                        <th data-field="city">City</th>
+                            <th data-field="name">Name</th>
+                            <th data-field="username">User Name</th>
+                            <th data-field="bottles">Bottles</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                        <td>Alvin</td>
-                        <td>Eclair</td>
-                        <td>$0.87</td>
-                        <td>$0.87</td>
-                        </tr>
+                        {this.state.data.map(data => 
+                            <tr>
+                                <td>{data[1]}</td>
+                                <td>{data[2]}</td>
+                                <td>{data[3]}</td>
+                            </tr>    
+                        )} 
                     </tbody>
                 </Table>
             </div>
