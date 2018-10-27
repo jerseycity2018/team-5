@@ -75,20 +75,20 @@ def topTenInCommunity(zipcode):
 
 @app.route("/leaderboard/topcommunity", methods = ['GET'])
 def topTenCommunities():
+	neighborhoods = ['SoHo', 'Harlem', 'Brooklyn', 'Jamaica', 'Astoria', 'Upper East Side']
 	communityMap = {}
 	pq = PriorityQueue()
 	reader = csv.reader(open('../utilities/data.csv', 'r'))
 	data = []
 	count = 0
 	for row in reader:
-		if row[4] not in communityMap:
-			if row[3] == "Total_Bottles": pass
-			else:
+		if row[3] == "Total_Bottles": pass
+		else:
+			if row[4] not in communityMap:
 				communityMap[row[4]] = int(row[3])
 				count += 1
-		else:
-			if row[3] == "Total_Bottles": pass
-			else: communityMap[row[4]] += int(row[3])
+			else:
+				communityMap[row[4]] += int(row[3])
 
 
 	for community in communityMap:		
@@ -96,6 +96,7 @@ def topTenCommunities():
 
 	result = {"communities":[]}
 	if count > 10: count = 10
+	c = 0
 	for i in range(count):
 		curr = pq.get()
 		zipcode = curr[1]
@@ -104,9 +105,9 @@ def topTenCommunities():
 		if zipSearch.major_city != None:
 			currRes = {"community": zipSearch.major_city, "bottles": -curr[0]}
 		else:
-			currRes = {"community": "Brooklyn", "bottles": -curr[0]}
+			currRes = {"community": neighborhoods[c%6], "bottles": -curr[0]}
 		result["communities"].append(currRes)
-
+		c += 1
 
 	return json.dumps(result)
 
