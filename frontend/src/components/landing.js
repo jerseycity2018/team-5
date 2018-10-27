@@ -38,16 +38,16 @@ class Landing extends Component {
                         <Row className="center-stuff">
                             <h1>What we do.</h1>
                             <Col>
-                                <h2>Hello</h2>
-                                <p>Some Description</p>
+                                <h2>Social Good</h2>
+                                <p>Reduce plastic waste</p>
                             </Col>                            
                             <Col>
-                                <h2>Hello2</h2>
-                                <p>Some Description</p>
+                                <h2>Social Incentives</h2>
+                                <p>Compete with others for a better planet</p>
                             </Col>
                             <Col>
-                                <h2>Hello2</h2>
-                                <p>Some Description</p>
+                                <h2>Game</h2>
+                                <p>Score #1 on the leaderboard</p>
                             </Col>
                         </Row>
                     </Container>
