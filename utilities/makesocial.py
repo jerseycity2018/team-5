@@ -11,8 +11,17 @@ with open('socialdata.csv', mode='w') as data:
     for line in namefile:
         names.append(line.split(None,1)[0])
 
-    
-    # data_write.writerow([ 
+    social_posts = 10 #Change posts if this is more than 10
+    name_counter = 0
+    posts = [ "Hello", "How Cool is this App?", "Bott.le!", "5 Stars",
+              "Great app with a large potential of growth", "Nice!", "Can't wait for the next update",
+              "Functinality App of the Year", "Keep up the amazing work", "Highly Reccomended" ]
+    for i in range(social_posts):
+        data_write.writerow([ names[name_counter]+" "+names[name_counter+1],
+                              "@"+names[name_counter]+str(i*2), posts[i] ])
+        name_counter += 10
+
+    print()
     
 
     
