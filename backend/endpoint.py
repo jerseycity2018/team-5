@@ -61,7 +61,7 @@ def topTenInCommunity(zipcode):
 	
 	return json.dumps(result)
 
-@app.route("/leaderboard/topcommunity/", methods = ['GET'])
+@app.route("/leaderboard/topcommunity", methods = ['GET'])
 def topTenCommunities():
 	communityMap = {}
 	pq = PriorityQueue()
