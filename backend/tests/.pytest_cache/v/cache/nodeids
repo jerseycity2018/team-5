@@ -2,5 +2,7 @@
   "basic_functionality_test.py::test_function",
   "leaderboard_test.py::test_user_leaderboard",
   "leaderboard_test.py::test_community_leaderboard",
-  "leaderboard_test.py::test_topcommunity_leaderboard"
+  "leaderboard_test.py::test_topcommunity_leaderboard",
+  "misc_test.py::test_social",
+  "misc_test.py::test_location"
 ]
