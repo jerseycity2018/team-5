@@ -83,7 +83,7 @@ def topTenCommunities():
 	for i in range(count):
 		curr = pq.get()
 		currRes = {"community": curr[1], "bottles": -curr[0]}
-		result["community"].append(currRes)
+		result["communities"].append(currRes)
 
 	return json.dumps(result)
 
