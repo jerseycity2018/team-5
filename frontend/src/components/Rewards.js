@@ -7,9 +7,9 @@ class Rewards extends Component {
     render() {
         return (
           <div>
-            <h1> Rewards </h1>
-              <h4> Rewards for the users</h4>
-                <table style = "width:100%">
+            <h1>Rewards</h1>
+              <h4>Rewards for the users</h4>
+                <table>
                   <tr>
                     <th><u>Rank</u></th>
                     <th><u>Rewards</u></th>
@@ -38,7 +38,7 @@ class Rewards extends Component {
                   </tr>
                 </table>
                 <h4>Rewards for the Community</h4>
-                  <table style = "width:100%">
+                  <table>
                   <tr>
                     <th><u>Points</u></th>
                     <th><u>Rewards</u></th>

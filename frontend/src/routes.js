@@ -9,6 +9,8 @@ import Settings from './components/settings';
 import About from './components/about';
 import QR from './components/qr';
 import Reciept from './components/reciept';
+import Rewards from './components/rewards';
+import Refer from './components/refer';
 
 class Routes extends Component {
     render() {
@@ -24,6 +26,8 @@ class Routes extends Component {
                     <Route path='/settings' component={Settings}/>
                     <Route path='/qr' component={QR}/>
                     <Route path='/reciept' component={Reciept}/>
+                    <Route path='/refer' component={Refer}/>
+                    <Route path='/rewards' component={Rewards}/>
                 </Switch>
             </main>
         )
