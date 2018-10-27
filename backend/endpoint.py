@@ -114,7 +114,16 @@ def getSocialMediaPosts():
 		result["posts"].append(currRes)
 	return json.dumps(result)
 
+@app.route("/locations/", methods = ['GET'])
+def getMapLocations():
+	result = {"locations" : []}
+	reader = csv.reader(open('../utilities/coordinates.csv', 'r'))
+	for row in reader:
+		currLocation = {"long" : row[0], "lat": row[1]}
+		result["locations"].append(currLocation)
 
+	return json.dumps(result)
+		
 
 
 
