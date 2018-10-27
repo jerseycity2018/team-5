@@ -13,8 +13,8 @@ with open('socialdata.csv', mode='w') as data:
 
     social_posts = 10 #Change posts if this is more than 10
     name_counter = 0
-    posts = [ "Hello", "How Cool is this App?", "Bott.le!", "5 Stars",
-              "Great app with a large potential of growth", "Nice!", "Can't wait for the next update",
+    posts = [ "Hello", "How Cool is this App?", "Bott.le!", "5 Stars", "Nice!", 
+              "Great app with a large potential of growth", "Can't wait for the next update",
               "Functinality App of the Year", "Keep up the amazing work", "Highly Reccomended" ]
     for i in range(social_posts):
         data_write.writerow([ names[name_counter]+" "+names[name_counter+1],

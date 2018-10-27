@@ -16,6 +16,7 @@ with open('data.csv', mode='w') as data:
 
     #print(len(names))
     #print(type(names[0]))
+
     name_counter = 0;
     for i in range(values):
         data_write.writerow([ str( nums[i] ), names[name_counter]+" "+names[name_counter+1],
