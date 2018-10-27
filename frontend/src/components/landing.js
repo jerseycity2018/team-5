@@ -23,9 +23,15 @@ class Landing extends Component {
                         </Link>
                     </div>
                     <br/>
-                    <img src={appStore} className="storeButtons"/>
+                    <img
+                        src={appStore}
+                        className="storeButtons"
+                        alt="Download on App Store" />
                     <br/>
-                    <img src={googlePlay} className="storeButtons"/>
+                    <img
+                        src={googlePlay}
+                        className="storeButtons"
+                        alt="Download on Google Play Store" />
                 </div>
                 <div className="banner-1">
                     <Container>
