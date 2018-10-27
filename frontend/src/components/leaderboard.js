@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Tab, Tabs } from 'react-materialize';
 import '../styles/leaderboard.css';
 
 class Leaderboard extends Component {
@@ -10,6 +11,8 @@ class Leaderboard extends Component {
             data: []
         };
         this.fetchLeaderboardUsers = this.fetchLeaderboardUsers.bind(this);
+        this.fetchLeaderboardCommunity = this.fetchLeaderboardCommunity.bind(this);
+        this.fetchLeaderboardTopCommunity = this.fetchLeaderboardTopCommunity.bind(this);
     }
 
     fetchLeaderboardUsers() {
@@ -56,7 +59,7 @@ class Leaderboard extends Component {
         }).then(json => {
             this.setState({
                 isLoaded: true,
-                data: json.users,
+                data: json.communities,
             })
         }).catch(error => {
             console.log(error);
@@ -64,7 +67,9 @@ class Leaderboard extends Component {
     }
 
     componentDidMount() {
-        this.fetchLeaderboardUsers()
+        this.fetchLeaderboardUsers();
+        this.fetchLeaderboardCommunity();
+        this.fetchLeaderboardTopCommunity();
     }
 
     render() {
@@ -72,7 +77,11 @@ class Leaderboard extends Component {
         return (
             <div>
                 <h1>Leaderboards</h1>
-
+                <Tabs className='z-depth-1'>
+                    <Tab title="All Users">Users</Tab>
+                    <Tab title="My Community">My Community</Tab>
+                    <Tab title="NYC Community">NYC Community</Tab>
+                </Tabs>
             </div>
         );
     }

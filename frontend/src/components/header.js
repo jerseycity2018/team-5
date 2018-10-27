@@ -18,6 +18,9 @@ class Header extends Component {
                             rel='noopener noreferrer'>Resources</a>
                     </li>
                     <li className="">
+                        <Link to={{ pathname:'/leaderboard' }}>Leaderboard</Link>
+                    </li>
+                    <li className="">
                         <Link to={{ pathname:'/about' }}>About Us</Link>
                     </li>
                     <li className="">
