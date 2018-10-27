@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../styles/landing.css';
 import appStore from '../images/app-store.png';
 import googlePlay from '../images/google-play.png';
+import rareLogo from '../images/logo-rare.png'
 
 class Landing extends Component {
     render() {
@@ -11,6 +12,7 @@ class Landing extends Component {
             <div>
                 <div className="hero-background"></div>
                 <div className="hero-text">
+                    <img src={rareLogo} alt="rare.org"/>
                     <h1>bott.le</h1>
                     <h4>Re-cylce, Re-bottle, Re-turn</h4>
                     <div className="button-padding">
