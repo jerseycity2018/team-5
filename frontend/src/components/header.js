@@ -12,7 +12,10 @@ class Header extends Component {
                         <Link to={{ pathname:'/' }}>Logo</Link>
                     </li>
                     <li className="">
-                        <a href="https://www.rare.org/" target='_blank'>Resources</a>
+                        <a
+                            href="https://www.rare.org/"
+                            target='_blank'
+                            rel='noopener noreferrer'>Resources</a>
                     </li>
                     <li className="">
                         <Link to={{ pathname:'/about' }}>About Us</Link>
@@ -21,7 +24,7 @@ class Header extends Component {
                         <Link to={{ pathname:'/login' }}>Log In</Link>
                     </li>
                     <li className="">
-                        <Link to={{ pathname:'/Register' }}>Sign Up</Link>
+                        <Link to={{ pathname:'/register' }}>Sign Up</Link>
                     </li>
                 </ul>
             </Navbar>
