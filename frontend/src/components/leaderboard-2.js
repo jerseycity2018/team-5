@@ -33,7 +33,6 @@ class Leaderboard2 extends Component {
     }
 
     render() {
-        console.log(this.state.data[0]);
         return (
             <div>
                 <h3>Forest Hills</h3>

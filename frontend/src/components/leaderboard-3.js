@@ -33,7 +33,6 @@ class Leaderboard3 extends Component {
     }
 
     render() {
-        console.log(this.state.data);
         return (
             <div>
                 <Table>
