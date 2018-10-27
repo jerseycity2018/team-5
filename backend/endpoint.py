@@ -3,8 +3,10 @@ from uszipcode import SearchEngine
 import json
 import csv
 from queue import PriorityQueue
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/", methods = ['GET'])
@@ -111,7 +113,6 @@ def getSocialMediaPosts():
 		currRes = {"name" : currName, "username": currHandle, "post": currPost }
 		result["posts"].append(currRes)
 	return json.dumps(result)
-
 
 
 
