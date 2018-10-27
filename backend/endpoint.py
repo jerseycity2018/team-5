@@ -110,7 +110,17 @@ def getSocialMediaPosts(userID):
 		result["posts"] = {"data" : row }
 
 	"""
-	pass
+	result = {"posts" : []}
+	for row in mockSocialMedia:
+		currName = row[0]
+		currHandle = row[1]
+		currPost = row[2]
+		currRes = {"name" : currName, "username": currHandle, "post": currPost }
+		result["posts"].append(currRes)
+
+	return currRes
+
+
 
 
 
