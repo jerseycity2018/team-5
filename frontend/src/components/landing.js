@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Button, Row, Col, Container } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import '../styles/landing.css';
+import appStore from '../images/app-store.png';
+import googlePlay from '../images/google-play.png';
 
 class Landing extends Component {
     render() {
@@ -21,9 +23,9 @@ class Landing extends Component {
                         </Button>
                     </div>
                     <br/>
-                    <Button>App Store</Button>
+                    <img src={appStore} className="storeButtons"/>
                     <br/>
-                    <Button>Google Play</Button>
+                    <img src={googlePlay} className="storeButtons"/>
                 </div>
                 <div className="banner-1">
                     <Container>
