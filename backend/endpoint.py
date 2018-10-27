@@ -70,10 +70,10 @@ def topTenCommunities():
 	count = 0
 	for row in reader:
 		if row[4] not in communityMap:
-			communityMap[row[4]] = int(row[3])
+			communityMap[row[4]] = 1#int(row[3])
 			count += 1
 		else:
-			communityMap[row[4]] += int(row[3])
+			communityMap[row[4]] += 1#int(row[3])
 
 	for community in communityMap:
 		pq.put((-communityMap[community], community))
@@ -83,7 +83,7 @@ def topTenCommunities():
 	for i in range(count):
 		curr = pq.get()
 		currRes = {"community": curr[1], "bottles": -curr[0]}
-		result["community"].append(currRes)
+		result["communities"].append(currRes)
 
 	return json.dumps(result)
 
