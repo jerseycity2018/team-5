@@ -23,6 +23,7 @@ def zip(zipcode):
 @app.route("/leaderboard/users", methods = ['GET'])
 def topTenUsers():
 	pq = PriorityQueue()
+	count = 0
 	reader = csv.reader(open('../utilities/data.csv', 'r'))
 	data = []
 
@@ -32,11 +33,21 @@ def topTenUsers():
 			pass
 		else:
 			pq.put((-int(row[3]), row))
+			count += 1
 
 	result = {"users" : []}
-	for i in range(10): 
+
+	if count > 10: count = 10
+	for i in range(count): 
 		result["users"].append((pq.get())[1])
 
+	"""
+	for i in range(count):
+		zipcode = result["users"][i][4]
+		search = SearchEngine(simple_zipcode=True)
+		zipSearch = search.by_zipcode(zipcode)
+		result["users"][i][4] = zipSearch["major_city"]
+	"""
 	return json.dumps(result)
 
 
