@@ -82,14 +82,13 @@ def topTenCommunities():
 	data = []
 	count = 0
 	for row in reader:
-		if row[4] not in communityMap:
-			if row[3] == "Total_Bottles": pass
-			else:
+		if row[3] == "Total_Bottles": pass
+		else:
+			if row[4] not in communityMap:
 				communityMap[row[4]] = int(row[3])
 				count += 1
-		else:
-			if row[3] == "Total_Bottles": pass
-			else: communityMap[row[4]] += int(row[3])
+			else:
+				communityMap[row[4]] += int(row[3])
 
 
 	for community in communityMap:		
