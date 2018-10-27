@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import '../styles/landing.css';
+import '../styles/login.css';
 
-class Landing extends Component {
+class Login extends Component {
     render() {
         return (
             <div>
-                <h1>Home Page</h1>
+                <h1>Login Page</h1>
             </div>
         );
     }
 }
 
-export default Landing;
+export default Login;
