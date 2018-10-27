@@ -1,0 +1,9 @@
+.teamPhoto {
+    width: 60%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.about {
+    padding-bottom: 30px;
+}

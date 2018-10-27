@@ -6,6 +6,7 @@ class Leaderboard extends Component {
         super(props);
         this.state = {
             isLoaded: 'false',
+            currentBoard: 'users',
             data: []
         };
         this.fetchLeaderboardUsers = this.fetchLeaderboardUsers.bind(this);
@@ -13,6 +14,40 @@ class Leaderboard extends Component {
 
     fetchLeaderboardUsers() {
         const url = 'http://52.204.11.167:5000/leaderboard/users';
+        return fetch(url).then(response => {
+            if (!response.ok) {
+                throw new Error();
+            }
+            return response.json();
+        }).then(json => {
+            this.setState({
+                isLoaded: true,
+                data: json.users,
+            })
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+
+    fetchLeaderboardCommunity() {
+        const url = 'http://52.204.11.167:5000/leaderboard/community/11012';
+        return fetch(url).then(response => {
+            if (!response.ok) {
+                throw new Error();
+            }
+            return response.json();
+        }).then(json => {
+            this.setState({
+                isLoaded: true,
+                data: json.users,
+            })
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+
+    fetchLeaderboardTopCommunity() {
+        const url = 'http://52.204.11.167:5000/leaderboard/topcommunity';
         return fetch(url).then(response => {
             if (!response.ok) {
                 throw new Error();
@@ -37,6 +72,7 @@ class Leaderboard extends Component {
         return (
             <div>
                 <h1>Leaderboards</h1>
+
             </div>
         );
     }
