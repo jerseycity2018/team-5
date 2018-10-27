@@ -23,9 +23,9 @@ def topTenUsers():
 	pq = PriorityQueue()
 	reader = csv.reader(open('data.csv', 'r'))
 	data = []
+
 	for row in reader:
 		data.append(row)
-	for row in data:
 		if(row[0] == "User_ID"):
 			pass
 		else:
@@ -38,24 +38,37 @@ def topTenUsers():
 	return json.dumps(result)
 
 
-@app.route("/leaderboard/comm", methods = ['GET'])
-def topTenUsers(type):
+@app.route("/l/community/<zipcode>", methods = ['GET'])
+def topTenInCommunity(zipcode):
 	pq = PriorityQueue()
 	reader = csv.reader(open('data.csv', 'r'))
 	data = []
+	count = 0
 	for row in reader:
 		data.append(row)
 	for row in data:
 		if(row[0] == "User_ID"):
 			pass
 		else:
-			pq.put((-int(row[3]), row))
+			print(row[4])
+			if row[4] == zipcode:
+				count += 1
+				pq.put((-int(row[3]), row))
 
 	result = {"users" : []}
-	for i in range(10): 
+	print("hello")
+	if count > 10:
+		count = 10
+	for i in range(count): 
 		result["users"].append((pq.get())[1])
-
+	
 	return json.dumps(result)
+
+
+
+
+
+
 
 
 
