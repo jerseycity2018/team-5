@@ -90,15 +90,23 @@ def topTenCommunities():
 			if row[3] == "Total_Bottles": pass
 			else: communityMap[row[4]] += int(row[3])
 
-	for community in communityMap:
+
+	for community in communityMap:		
 		pq.put((-communityMap[community], community))
 
 	result = {"communities":[]}
 	if count > 10: count = 10
 	for i in range(count):
 		curr = pq.get()
-		currRes = {"community": curr[1], "bottles": -curr[0]}
+		zipcode = curr[1]
+		search = SearchEngine(simple_zipcode=True)
+		zipSearch = search.by_zipcode(zipcode)
+		if zipSearch.major_city != None:
+			currRes = {"community": zipSearch.major_city, "bottles": -curr[0]}
+		else:
+			currRes = {"community": "Brooklyn", "bottles": -curr[0]}
 		result["communities"].append(currRes)
+
 
 	return json.dumps(result)
 
