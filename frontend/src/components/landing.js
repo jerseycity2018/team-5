@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Row, Col, Container } from 'react-materialize';
+import { Button, Row, Col, Container, Icon } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import '../styles/landing.css';
 import appStore from '../images/app-store.png';
@@ -40,15 +40,18 @@ class Landing extends Component {
                         <Row className="center-stuff">
                             <h1>What we do.</h1>
                             <Col>
-                                <h2>Social Good</h2>
+                                <h3>Social Good</h3>
+                                <Icon className="icon-size">accessibility_new</Icon>
                                 <p>Reduce plastic waste</p>
                             </Col>                            
                             <Col>
-                                <h2>Social Incentives</h2>
+                                <h3>Social Incentives</h3>
+                                <Icon className="icon-size">supervisor_account</Icon>
                                 <p>Compete with others for a better planet</p>
                             </Col>
                             <Col>
-                                <h2>Game</h2>
+                                <h3>Game</h3>
+                                <Icon className="icon-size">headset_mic</Icon>
                                 <p>Score #1 on the leaderboard</p>
                             </Col>
                         </Row>

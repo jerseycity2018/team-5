@@ -11,7 +11,7 @@ class Leaderboard extends Component {
             <div>
                 <Container>
                     <h1>Leaderboards</h1>
-                    <Tabs className='z-depth-2'>
+                    <Tabs className='tab-navs tabs-fixed-width z-depth-2'>
                         <Tab title="All Users">
                             <Leaderboard1/>
                         </Tab>
