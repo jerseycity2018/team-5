@@ -20,7 +20,7 @@ with open('data.csv', mode='w') as data:
     for i in range(values):
         data_write.writerow([ str( nums[i] ), names[name_counter]+" "+names[name_counter+1],
                               "@"+names[name_counter]+str(i*2), str((i+1)*nums[i]%100),
-                              str(int(10000 + (((i+1)*3) % (values/12)))) ])
+                              str(int(11010 + (((i+1)*3) % (values/30)))) ])
         name_counter += 2
         
     # print( type(Nums[1]))
@@ -28,11 +28,12 @@ with open('data.csv', mode='w') as data:
 
 
 # ----- TESTING ----- #
+
 testfile = open("data.csv","r")
 counter = 0
 for line in testfile:
     #print(line.split(',')[-1][:-1])
-    if line.split(',')[-1][:-1] == str(10003):
+    if line.split(',')[-1][:-1] == str(11013):
         counter += 1
 
 print(counter)
