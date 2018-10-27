@@ -5,7 +5,7 @@ class Leaderboard extends Component {
     render() {
         return (
             <div>
-                <h1>Leaderboard Page</h1>
+                <h1>Leaderboards</h1>
             </div>
         );
     }

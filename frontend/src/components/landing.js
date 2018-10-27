@@ -15,12 +15,12 @@ class Landing extends Component {
                     <h4>Re-cylce, Re-bottle, Re-turn</h4>
                     <div className="button-padding">
                         <br/>
-                        <Button className="button-style">
-                            <Link to={{ pathname:'/login' }}>Log In</Link>
-                        </Button>
-                        <Button className="button-style">
-                            <Link to={{ pathname:'/register' }}>Sign Up</Link>
-                        </Button>
+                        <Link to={{ pathname:'/login' }}>
+                            <Button className="button-style">Log In</Button>
+                        </Link>
+                        <Link to={{ pathname:'/register' }}>
+                            <Button className="button-style">Sign Up</Button>
+                        </Link>
                     </div>
                     <br/>
                     <img src={appStore} className="storeButtons"/>
