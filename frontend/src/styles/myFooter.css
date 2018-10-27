@@ -5,5 +5,5 @@ footer {
     margin-left: auto; 
     margin-right: auto; 
     width: 150px;
-    bottom: 0;
+    bottom: -10;
 }

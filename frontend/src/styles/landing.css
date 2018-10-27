@@ -16,6 +16,28 @@
     transform: translate(-50%, -50%);
 }
 
+.banner-1 {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin-top: -1px;
+  min-height: 400px;
+}
+
+.center-stuff {
+  display:inline-block;
+}
+
+.button-padding {
+  padding: 10px;
+}
+
+.button-style {
+  margin: 10px;
+  background-color: black;
+  
+}
+
 @-webkit-keyframes Gradient {
     0% {background-position: 0% 50%}
     50% {background-position: 100% 50%}

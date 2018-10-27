@@ -9,7 +9,7 @@ class Header extends Component {
             <Navbar>
                 <ul>
                     <li className="">
-                        <Link to={{ pathname:'/' }}>Logo</Link>
+                        <Link to={{ pathname:'/' }}>bott.le</Link>
                     </li>
                     <li className="">
                         <a
