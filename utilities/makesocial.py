@@ -21,7 +21,19 @@ with open('socialdata.csv', mode='w') as data:
                               "@"+names[name_counter]+str(i*2), posts[i] ])
         name_counter += 10
 
-    print()
+
+# ----- TESTING ----- #
+'''
+testfile = open("socialdata.csv","r")
+counter = 0
+for line in testfile:
+    #print(line.split(',')[-1][:-1])
+    if line.split(',')[-1][:-1] == "Hello":
+        counter += 1
+print(counter)
+#print("done?")
+'''
+print()
     
 
     
