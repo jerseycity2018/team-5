@@ -38,7 +38,7 @@ def topTenUsers():
 	return json.dumps(result)
 
 
-@app.route("/l/community/<zipcode>", methods = ['GET'])
+@app.route("/leaderboard/community/<zipcode>", methods = ['GET'])
 def topTenInCommunity(zipcode):
 	pq = PriorityQueue()
 	reader = csv.reader(open('data.csv', 'r'))
@@ -56,9 +56,7 @@ def topTenInCommunity(zipcode):
 				pq.put((-int(row[3]), row))
 
 	result = {"users" : []}
-	print("hello")
-	if count > 10:
-		count = 10
+	if count > 10: count = 10
 	for i in range(count): 
 		result["users"].append((pq.get())[1])
 	
