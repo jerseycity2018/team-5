@@ -4,3 +4,5 @@ An application that pinpoints plastic bottle recycling machines near the user. T
 The point of the leaderboard and points system in the app is to provide an insentive for the users to collect plastic bottles and travel to recycling machines. The higher the score on the leaderboard, the better the rewards the user will recieve. 
 
 [Power Point](https://docs.google.com/presentation/d/1OJlAV-3H7kdv7PQS4xjcyv53yinOhIHqxp9Vv9nfHhQ/edit?usp=sharing) explaining the app
+
+[Live Website](https://bottle5.herokuapp.com/)
