@@ -1,1 +1,2 @@
-# team-5
+# Bott.le
+An application that pinpoints plastic bottle recycling machines near the user. The user will be able to choose which location they want to travel too and the app will provide directions. Once the user is at the machine the app will have a QR button on the front page that will allow the user to scan a code on the machine. This code will send the user's  phone a receipt of the number of bottles placed in the machine and time of access. This receipt will provide the app the number of bottles the user placed in the machine, which will be used to rank them against other users of the app. A leaderboard will display the 
