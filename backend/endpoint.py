@@ -51,7 +51,6 @@ def topTenInCommunity(zipcode):
 	for row in data:
 		if row[0] == "User_ID": pass
 		else:
-			print(row[4])
 			if row[4] == zipcode:
 				count += 1
 				pq.put((-int(row[3]), row))
