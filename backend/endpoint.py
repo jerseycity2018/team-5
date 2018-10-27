@@ -41,13 +41,15 @@ def topTenUsers():
 	for i in range(count): 
 		result["users"].append((pq.get())[1])
 
-	"""
+	
 	for i in range(count):
 		zipcode = result["users"][i][4]
 		search = SearchEngine(simple_zipcode=True)
 		zipSearch = search.by_zipcode(zipcode)
-		result["users"][i][4] = zipSearch["major_city"]
-	"""
+		if zipSearch.major_city != None: result["users"][i][4] = zipSearch.major_city
+		else: result["users"][i][4] = "Brooklyn"
+		print(zipSearch)
+	
 	return json.dumps(result)
 
 
