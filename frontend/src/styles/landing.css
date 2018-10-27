@@ -35,7 +35,10 @@
 .button-style {
   margin: 10px;
   background-color: black;
-  
+}
+
+.storeButtons {
+  width: 200px;
 }
 
 @-webkit-keyframes Gradient {
