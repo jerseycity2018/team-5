@@ -44,10 +44,12 @@ class Leaderboard3 extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                        <td>Flushing</td>
-                        <td>321313</td>
-                        </tr>
+                        {this.state.data.map(data => 
+                            <tr>
+                                <td>{data['community']}</td>
+                                <td>{data['bottles']}</td>
+                            </tr>    
+                        )}
                     </tbody>
                 </Table>
             </div>
