@@ -21,7 +21,7 @@ def zip(zipcode):
 @app.route("/leaderboard/users", methods = ['GET'])
 def topTenUsers():
 	pq = PriorityQueue()
-	reader = csv.reader(open('data.csv', 'r'))
+	reader = csv.reader(open('../utilities/data.csv', 'r'))
 	data = []
 
 	for row in reader:
@@ -41,7 +41,7 @@ def topTenUsers():
 @app.route("/leaderboard/community/<zipcode>", methods = ['GET'])
 def topTenInCommunity(zipcode):
 	pq = PriorityQueue()
-	reader = csv.reader(open('data.csv', 'r'))
+	reader = csv.reader(open('../utilities/data.csv', 'r'))
 	data = []
 	count = 0
 	for row in reader:
@@ -65,15 +65,18 @@ def topTenInCommunity(zipcode):
 def topTenCommunities():
 	communityMap = {}
 	pq = PriorityQueue()
-	reader = csv.reader(open('data.csv', 'r'))
+	reader = csv.reader(open('../utilities/data.csv', 'r'))
 	data = []
 	count = 0
 	for row in reader:
 		if row[4] not in communityMap:
-			communityMap[row[4]] = 1#int(row[3])
-			count += 1
+			if row[3] == "Total_Bottles": pass
+			else:
+				communityMap[row[4]] = int(row[3])
+				count += 1
 		else:
-			communityMap[row[4]] += 1#int(row[3])
+			if row[3] == "Total_Bottles": pass
+			else: communityMap[row[4]] += int(row[3])
 
 	for community in communityMap:
 		pq.put((-communityMap[community], community))
@@ -86,6 +89,30 @@ def topTenCommunities():
 		result["communities"].append(currRes)
 
 	return json.dumps(result)
+
+@app.route("/users/<username>", methods = ['GET'])
+def getUser(username):
+	with open('data.csv') as csv_file:
+		csv_reader = csv.reader(csv_file, delimter=',')
+		for row in csv_reader:
+			if username == row[2]:
+				return json.dumps({"user":row})
+	return {"user": "user does not exist"}
+
+
+@app.route("/social/<userID>", methods = ['GET'])
+def getSocialMediaPosts(userID):
+	mockSocialMedia = [["bob", "@bob", "Hi"], ["jack", "jack", "@jack", "hello"]]
+	"""
+	reader = csv.reader(open('../utilities/socialmedia.csv', 'r'))
+	result = {"posts": {}}
+	for row in reader:
+		result["posts"] = {"data" : row }
+
+	"""
+	pass
+
+
 
 
 
