@@ -28,7 +28,6 @@ with open('data.csv', mode='w') as data:
 
 
 # ----- TESTING ----- #
-
 testfile = open("data.csv","r")
 counter = 0
 for line in testfile:
