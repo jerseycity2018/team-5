@@ -27,13 +27,16 @@ class Header extends Component {
                         <Link to={{ pathname:'/leaderboard' }}>Leaderboard</Link>
                     </li>
                     <li className="">
+                        <Link to={{ pathname:'/rewards' }}>Rewards</Link>
+                    </li>
+                    <li className="">
                         <Link to={{ pathname:'/about' }}>About Us</Link>
                     </li>
-                    <li className="">
-                        <Link to={{ pathname:'/login' }}>Log In</Link>
-                    </li>
-                    <li className="">
+                    <li className="right">
                         <Link to={{ pathname:'/register' }}>Sign Up</Link>
+                    </li>
+                    <li className="right">
+                        <Link to={{ pathname:'/login' }}>Log In</Link>
                     </li>
                 </ul>
             </Navbar>

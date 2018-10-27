@@ -10,3 +10,7 @@ nav ul a {
 .nav-logo-pic {
     height: 60px;
 }
+
+#nav-mobile {
+    padding: 35px;
+}

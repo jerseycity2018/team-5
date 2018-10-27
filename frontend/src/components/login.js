@@ -14,7 +14,7 @@ class Login extends Component {
                         <Input type="password" placeholder="What is your password?" s={12} label="Password" />
                     </Row>
                 </Container>
-                <Link to={{ pathname:'/home' }}>
+                <Link to={{ pathname:'/refer' }}>
                     <Button className="button-style">Log In</Button>
                 </Link>
                 <Link to={{ pathname:'/register' }}>

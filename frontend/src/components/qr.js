@@ -9,11 +9,11 @@ class About extends Component {
         return (
             <div className="qr">
                 <Container>
-                    <h5>Scan QR Code</h5>
-                    <div>
+                    <h3>Scan QR Code</h3>
+                    <div className="webcam">
                         <Webcam />
                     </div>
-                    <Link to={{ pathname:'/reciept' }}><Button>Scan</Button></Link>
+                    <Link to={{ pathname:'/reciept' }}><Button className="button-style">Scan</Button></Link>
                 </Container>
 			</div>
         );

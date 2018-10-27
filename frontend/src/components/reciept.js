@@ -9,12 +9,12 @@ class About extends Component {
             <div className="reciept">
                 <Container>
                     <h3>Transaction Complete</h3>
-                    <div>
+                    <div className="reciept-text">
                         <h5>Thank you for making an impact</h5>
                         <p>Transaction #4234592342</p>
                         <p>Bottles: 21</p>
                     </div>
-                    <Link to={{ pathname:'/home' }}><Button>Continue</Button></Link>
+                    <Link to={{ pathname:'/home' }}><Button className="button-style">Continue</Button></Link>
                 </Container>
 			</div>
         );
