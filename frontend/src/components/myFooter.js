@@ -5,7 +5,7 @@ class MyFooter extends Component {
     render() {
         return (
             <div>
-                <footer>&copy; Team 5 Guys</footer>
+                <footer>2018 &copy; Team 5 Guys</footer>
             </div>
         )
     }
