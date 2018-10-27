@@ -13,7 +13,7 @@ class About extends Component {
                     <div className="webcam">
                         <Webcam />
                     </div>
-                    <Link to={{ pathname:'/reciept' }}><Button className="button-style">Scan</Button></Link>
+                    <Link to={{ pathname:'/loading' }}><Button className="button-style">Scan</Button></Link>
                 </Container>
 			</div>
         );

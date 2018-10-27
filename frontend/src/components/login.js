@@ -10,8 +10,8 @@ class Login extends Component {
                 <h1 className="header-spacing">Log In</h1>
                 <Container>
                     <Row>
-                        <Input placeholder="What is your user name?" s={12} label="User name" />
-                        <Input type="password" placeholder="What is your password?" s={12} label="Password" />
+                        <Input placeholder="What is your user name?" s={12} label="User name" value="GALE962"/>
+                        <Input type="password" placeholder="What is your password?" s={12} label="Password" value="hunter2"/>
                     </Row>
                 </Container>
                 <Link to={{ pathname:'/refer' }}>

@@ -11,6 +11,7 @@ import QR from './components/qr';
 import Reciept from './components/reciept';
 import Rewards from './components/rewards';
 import Refer from './components/refer';
+import Loading from './components/loading';
 
 class Routes extends Component {
     render() {
@@ -28,6 +29,7 @@ class Routes extends Component {
                     <Route path='/reciept' component={Reciept}/>
                     <Route path='/refer' component={Refer}/>
                     <Route path='/rewards' component={Rewards}/>
+                    <Route path='/loading' component={Loading}/>
                 </Switch>
             </main>
         )
