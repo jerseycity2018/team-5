@@ -7,6 +7,8 @@ import Home from './components/home';
 import Leaderboard from './components/leaderboard';
 import Settings from './components/settings';
 import About from './components/about';
+import QR from './components/qr';
+import Reciept from './components/reciept';
 
 class Routes extends Component {
     render() {
@@ -20,6 +22,8 @@ class Routes extends Component {
                     <Route path='/home' component={Home}/>
                     <Route path='/leaderboard' component={Leaderboard}/>
                     <Route path='/settings' component={Settings}/>
+                    <Route path='/qr' component={QR}/>
+                    <Route path='/reciept' component={Reciept}/>
                 </Switch>
             </main>
         )

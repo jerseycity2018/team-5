@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 import { Container, Row, Col } from 'react-materialize';
+import { Link } from 'react-router-dom';
 import faker from 'faker';
 import '../styles/home.css';
 
@@ -48,6 +49,7 @@ class Home extends Component {
           containerElement={ <div style={{ height: `85vh`, width: '100%' }} /> }
           mapElement={ <div style={{ height: `100%` }} /> }
         />
+        <Link to={{ pathname:'/qr' }}><div className="qr-code">QR Scan</div></Link>
         <Container>
             <div className="home">
               <Row>          
