@@ -1,20 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'react-materialize';
 
-// function convertToTable(data) {
-//     data.map(data => {
-
-//         return (
-//             <tr>
-//                 <td>{data[1]}</td>
-//                 <td>{data[2]}</td>
-//                 <td>{data[3]}</td>
-//                 <td>{data[4]}</td>
-//             </tr>
-//         )
-//     })
-// }
-
 class Leaderboard1 extends Component {
     constructor(props) {
         super(props);
@@ -47,8 +33,6 @@ class Leaderboard1 extends Component {
     }
 
     render() {
-        // console.log(this.state.data);
-        // console.log(this.props.zipCodeConvert('11355'));
         return (
             <div>
                 <Table>
