@@ -119,7 +119,7 @@ def getMapLocations():
 	result = {"locations" : []}
 	reader = csv.reader(open('../utilities/coordinates.csv', 'r'))
 	for row in reader:
-		currLocation = {"long" : row[0], "lat": row[1]}
+		currLocation = {"lat" : row[0], "long": row[1]}
 		result["locations"].append(currLocation)
 
 	return json.dumps(result)
