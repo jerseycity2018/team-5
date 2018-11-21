@@ -6,3 +6,5 @@ The point of the leaderboard and points system in the app is to provide an insen
 [Power Point](https://docs.google.com/presentation/d/1OJlAV-3H7kdv7PQS4xjcyv53yinOhIHqxp9Vv9nfHhQ/edit?usp=sharing) explaining the app
 
 [Live Website](https://bottle5.herokuapp.com/)
+
+##### The code ("Code") in this repository was created solely by the student teams during a coding competition hosted by JPMorgan Chase Bank, N.A. ("JPMC").						JPMC did not create or contribute to the development of the Code.  This Code is provided AS IS and JPMC makes no warranty of any kind, express or implied, as to the Code,						including but not limited to, merchantability, satisfactory quality, non-infringement, title or fitness for a particular purpose or use.
